@@ -9,7 +9,7 @@
         var video = document.getElementById('video');
         video.volume = 0.9;
         var hls = new Hls();
-        hls.loadSource('https://trans7-livestreaming.akamaized.net/hls/live/628325/Test/myDestination-720p/chunklist.m3u8');
+        hls.loadSource('https://cdn-livetv2.metube.id/hls/trans7.m3u8');
         hls.attachMedia(video);
         hls.on(Hls.Events.MANIFEST_PARSED,function()
         {
@@ -18,7 +18,7 @@
     }
     else if (video.canPlayType('application/vnd.apple.mpegurl'))
     {
-        video.src = 'https://trans7-livestreaming.akamaized.net/hls/live/628325/Test/myDestination-720p/chunklist.m3u8';
+        video.src = 'https://cdn-livetv2.metube.id/hls/trans7.m3u8';
         video.addEventListener('canplay',function()
         {
             video.play();
