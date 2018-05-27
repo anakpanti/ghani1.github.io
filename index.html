@@ -20,61 +20,55 @@
 body {
 padding-bottom: 60px;
 }
+ .video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+background:linear-gradient(to bottom,#fefefe 0,#d1d1d1 100%);
+border:1px solid #A8A8A8;border-radius:5px;
+margin:20px auto;width:100%;
+box-shadow:1px 30px 30px -26px #818181;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}     
 </style>
   </head>
   <body>
-    <h1 class="text-center"><strong>Jquery responsive embed Youtube videos</strong></h1>
-    <h2 class="text-center">With defer iframe</h2>
-        <div class="container">
-        <div class="row">
-          <h3><a class="btn btn-default btn-sm" href="" title="Back to article">Back to article</a></h3>
-          </div>
-          </div>
-    <hr>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+   <div class="video-container">
+<div id="tivi"><iframe allowfullscreen="true" src="//www.streamingclas.cf/2017/11/bein-sport-2.html" allowtransparency="true" frameborder="0" height="100%" scrolling="no" width="100%"></iframe>
+<script type="text/javascript">
+   function server2() {
+      document.getElementById("tivi").innerHTML = '<iframe allowfullscreen="true" src="//www.streamingclas.cf/2017/11/bein-sport-2.html" allowtransparency="true" frameborder="0" height="100%" scrolling="no" width="100%"></iframe>';
+   }
+   function server3() {
+      document.getElementById("tivi").innerHTML = '<iframe allowfullscreen="true" src="//www.streamingclas.cf/2017/11/bein-sport-3.html" allowtransparency="true" frameborder="0" height="100%" scrolling="no" width="100%"></iframe>';
+   }
+   function server4() {
+      document.getElementById("tivi").innerHTML = '<iframe allowfullscreen="true" src="//www.streamingclas.cf/2017/11/bein-sport-4.html" allowtransparency="true" frameborder="0" height="100%" scrolling="no" width="100%"></iframe>';
+   }
+   function server5() {
+      document.getElementById("tivi").innerHTML = '<iframe allowfullscreen="true" src="//www.streamingclas.cf/2017/11/bein-sport-5.html" allowtransparency="true" frameborder="0" height="100%" scrolling="no" width="100%"></iframe>';
+   }
+   function server6() {
+      document.getElementById("tivi").innerHTML = '<iframe allowfullscreen="true" src="//www.streamingclas.cf/2017/11/bein-sport-6.html" allowtransparency="true" frameborder="0" height="100%" scrolling="no" width="100%"></iframe>';
+   }
+   function server7() {
+      document.getElementById("tivi").innerHTML = '<iframe allowfullscreen="true" src="//www.streamingclas.cf/2017/11/bein-sport-7.html" allowtransparency="true" frameborder="0" height="100%" scrolling="no" width="100%"></iframe>';
+   }
+   function server8() {
+      document.getElementById("tivi").innerHTML = '<iframe allowfullscreen="true" src="//www.streamingclas.cf/2017/11/bein-sport-8.html" allowtransparency="true" frameborder="0" height="100%" scrolling="no" width="100%"></iframe>';
+   }
+</script></div></div>
 
-                 <iframe width="560" height="315" src="http://www.ball24live.online/2017/09/trans7.html" frameborder="0" allowfullscreen></iframe>
-
-                <hr>
-               
-                 <iframe width="560" height="315" src="http://www.ball24live.online/2017/09/trans7.html" frameborder="0" allowfullscreen></iframe>
-
-                <hr>
-
-                <iframe width="560" height="315" src="http://www.ball24live.online/2017/09/trans7.html" frameborder="0" allowfullscreen></iframe>
-               
-            </div>
-        </div>
-    </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('iframe[src*="youtube.com"]').wrap('<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:0 auto;width:100%"></div>');
-    $('iframe[src*="youtube.com"]').css({
-        "position": "absolute",
-        "top": "0",
-        "left": "0",
-        "width": "100%",
-        "height": "100%",
-        "border": "0"
-    });
-    $('iframe[src*="youtube.com"]').each(function() {
-        $(this).attr("data-src", $(this).attr("src"));
-        $(this).attr("src", "")
-    });
-});
-
-function init() {
-    var vidDefer = document.getElementsByTagName('iframe');
-    for (var i = 0; i < vidDefer.length; i++) {
-        if (vidDefer[i].getAttribute('data-src')) {
-            vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
-        }
-    }
-}
-window.onload = init;
-</script>
+<div align="center">
+<a class="playbtn" href="http://ball24live.blogspot.co.id/2018/02/ball-24-live.html">Ball24Live</a> <a class="playbtn" href="javascript:server2();">Ball 2</a> <a class="playbtn" href="javascript:server3();">Ball 3</a> <a class="playbtn" href="javascript:server4();">Ball 4</a> <a class="playbtn" href="javascript:server5();">Ball 5</a><a class="playbtn" href="javascript:server6();">Ball 6</a><a class="playbtn" href="javascript:server7();">Ball 7</a><a class="playbtn" href="javascript:server8();">Ball 8</a></div>
   </body>
 </html>
